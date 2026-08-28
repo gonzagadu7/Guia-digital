@@ -195,6 +195,39 @@ border-top:1px solid rgba(255,255,255,.1);
 color:#999;
 }
 
+  .vendas-box{
+max-width:900px;
+margin:auto;
+padding:50px 30px;
+text-align:center;
+background:linear-gradient(180deg,#0f172a,#0A1025);
+border:2px solid rgba(0,163,255,.4);
+border-radius:24px;
+box-shadow:
+0 0 30px rgba(0,163,255,.15),
+inset 0 0 30px rgba(0,163,255,.08);
+overflow:hidden;
+}
+
+.vendas-box h3{
+font-size:2.2rem;
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#dbeafe;
+margin-bottom:20px;
+}
+
+#contadorVendas{
+font-size:5.5rem;
+font-weight:800;
+color:#00A3FF;
+text-shadow:
+0 0 10px #00A3FF,
+0 0 25px #00A3FF,
+0 0 50px rgba(0,163,255,.8);
+}
+  
 @media(max-width:768px){
 
 .hero h1{
@@ -209,6 +242,12 @@ grid-template-columns:repeat(2,1fr);
 font-size:55px;
 }
 
+  .vendas-box h3{
+font-size:1.3rem;
+}
+
+#contadorVendas{
+font-size:2.8rem;
 }
 
 </style>
