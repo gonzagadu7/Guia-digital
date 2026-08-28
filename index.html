@@ -450,24 +450,32 @@ DÚVIDAS <span>FREQUENTES</span>
 2M STORE © 2026 • Todos os direitos reservados
 </footer>
 
-  <script>
-let total = Number(localStorage.getItem("vendas2m")) || 100000;
+<script>
+const valorInicial = 100000;
+const aumentoPorSegundo = 10;
 
-function atualizarTela(){
+const dataInicial = new Date("2026-08-28T00:00:00");
+
+function atualizarTela() {
+
+  const agora = new Date();
+
+  const segundosPassados =
+    (agora - dataInicial) / 1000;
+
+  const total =
+    valorInicial + (segundosPassados * aumentoPorSegundo);
+
   document.getElementById("contadorVendas").innerText =
-  total.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL"
-  });
+    total.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    });
 }
 
 atualizarTela();
 
-setInterval(() => {
-  total += 50;
-  localStorage.setItem("vendas2m", total);
-  atualizarTela();
-}, 5000);
+setInterval(atualizarTela, 1000);
 </script>
   
 </body>
