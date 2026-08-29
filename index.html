@@ -229,12 +229,20 @@ text-shadow:
 }
 
   .depoimentos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:10px 0;
+scroll-snap-type:x mandatory;
 }
 
 .depoimento{
+min-width:300px;
+scroll-snap-align:center;
+}
+
+.depoimento{
+min-width:300px;
 background:#0A1025;
 padding:30px;
 border-radius:20px;
